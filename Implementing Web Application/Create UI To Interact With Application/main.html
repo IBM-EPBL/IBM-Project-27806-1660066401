@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head>
+  
+    <body>
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><span></span></label>
+      <label for="active" class="close"></label>
+      <div class="wrapper">
+        <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Explore</a></li>
+  <li><a href="#">Settings</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">My Stuff</a></li>
+  </ul>
+  </div>
+  <div class="content">
+        <div class="title">
+  Welcome To News Tracker</div>
+  <p>
+  Prototype UI</p>
+  </div>
+  </body>
+</html>  
+
+
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "d63547f8-f695-4dc1-9d49-1427ee71a40c", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "37373119-945f-46a0-928a-ced41dc40f36", // The ID of your service instance.
+        onLoad: function (instance) { instance.render(); }
+    };
+    setTimeout(function () {
+        const t = document.createElement('script');
+        t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+    });
+</script>
