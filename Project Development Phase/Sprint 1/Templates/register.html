@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section
+  class="hero d-flex flex-column justify-content-center align-items-center"
+  data-aos="fade"
+  data-aos-delay="1500"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <h2>We provide the<span>Latest News</span> in and around your city!</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
+
+<!-- ======= Hero Section ======= -->
+<section
+  class="d-flex flex-column justify-content-center align-items-center"
+  data-aos="fade"
+  data-aos-delay="1500"
+>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-9">
+      <div class="py-2">
+        <h3>Register</h3>
+      </div>
+      <form method="POST" class="text-center">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input
+              type="text"
+              name="first_name"
+              class="form-control"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input
+              type="text"
+              class="form-control"
+              name="last_name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="form-group mt-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="form-group mt-3">
+          <input
+            type="password"
+            class="form-control"
+            name="confirm_password"
+            placeholder="Confirm Password"
+            required
+          />
+          {{msg}}
+        </div>
+        <div>
+          <a href="login"><span>Already a user? Login here!</span></a>
+        </div>
+
+        <div class="text-center py-4">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+    <!-- End Contact Form -->
+  </div>
+</section>
+<!-- End Hero Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>BlitzcraftHQ</span></strong
+      >. All Rights Reserved
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<div id="preloader">
+  <div class="line"></div>
+</div>
+
+<!-- Vendor JS Files -->
+
+{% endblock %}
