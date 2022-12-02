@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% block title %}
+    Registration
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <center>
+        <div class="alert alert-danger alter-dismissable fade show" style="width: 18rem;" role="alert">
+          {{ message }}
+        </div>
+      </center>
+        {% else %}
+        <center>
+        <div class="alert alert-success alter-dismissable fade show" style="width: 18rem;" role="alert">
+          {{ message }}
+        </div>
+      </center>
+      {% endif %} 
+    {% endfor %} 
+  {% endif %} 
+{% endwith %}
+
+<center>
+<div style="padding-top: 200px;">
+  <h3>Welcome to News Tracker</h3>
+  <hr style="width: 18rem;">
+<div class="card" style="width: 18rem">
+  <div class="card-header" style="background-color:green;"><div class="text-white">Registration</div></div>
+  <ul class="list-group list-group-flush">
+    <form method="POST" class="form-group">
+    <li class="list-group-item"><input type="email" class="form-control" placeholder="Email" name="email" required></li>
+    <li class="list-group-item"><input type="password" class="form-control" placeholder="Password" name="password"  required minlength="8"></li>
+    <li class="list-group-item"><input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" required minlength="8"></li>
+    <button type="submit" class="btn btn-outline-success" style="width: 5rem;  margin-top:10px; margin-bottom:10px;">Signup</button>
+    </form>
+  </ul>
+</div>
+<a href="/login" class="link link-success">Already Have an Account?</a>
+</div>
+</center>
+
+{% endblock %}

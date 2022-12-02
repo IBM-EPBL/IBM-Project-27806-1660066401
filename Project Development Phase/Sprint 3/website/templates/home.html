@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ Home
+ {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <hr>
+        <b>
+        <span>
+            <a href="./">Latest Headlines</a>
+        </span>
+        </b>
+        <span style="margin-left:100px;">
+            Filter By :
+            <a href="./world">world</a>,
+            <a href="./business">business</a>,
+            <a href="./tech">technology</a>,
+            <a href="./entertainment">entertainment</a>,
+            <a href="./science">science</a>,
+            <a href="./sport">sports</a>,
+            <a href="./economics">economics</a>,
+            <a href="./finance">finance</a>
+
+        </span>
+        <hr>
+        {% for news in data %}
+            <div>
+                <a href="{{ news.link }}" target="_blank">{{ news.title }}</a>
+            </div>
+        <img src="{{ news.media }}" alt="">
+            <p>{{ news.summary }}</p>
+            <hr>
+        {% endfor %}
+    </div>
+    
+{% endblock %}
